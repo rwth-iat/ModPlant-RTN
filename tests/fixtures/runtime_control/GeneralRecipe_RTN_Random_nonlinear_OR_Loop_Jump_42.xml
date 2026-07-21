@@ -1,0 +1,950 @@
+<?xml version='1.0' encoding='utf-8'?>
+<b2mml:GRecipe xmlns:b2mml="http://www.mesa.org/xml/B2MML" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mesa.org/xml/B2MML BatchML-GeneralRecipe.xsd">
+  <b2mml:ID>RTN_Random_nonlinear_OR_Loop_Jump_42</b2mml:ID>
+  <b2mml:Description>RTN_Random_nonlinear_OR_42</b2mml:Description>
+  <b2mml:GRecipeType>General</b2mml:GRecipeType>
+  <b2mml:LifeCycleState>Draft</b2mml:LifeCycleState>
+  <b2mml:ProcessProcedure>
+    <b2mml:ID>RTN_Random_nonlinear_OR_Loop_Jump_42_ProcessProcedure</b2mml:ID>
+    <b2mml:Description>Canonical RecipeGraph procedure</b2mml:Description>
+    <b2mml:ProcessElementType>Process</b2mml:ProcessElementType>
+    <b2mml:LifeCycleState>Draft</b2mml:LifeCycleState>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0001</b2mml:ID>
+      <b2mml:FromID>__start__</b2mml:FromID>
+      <b2mml:ToID>and_split_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0002</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=b1;gatewayGroup=AND_001</b2mml:Description>
+      <b2mml:FromID>and_split_001</b2mml:FromID>
+      <b2mml:ToID>dose_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0003</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=b2;gatewayGroup=AND_001</b2mml:Description>
+      <b2mml:FromID>and_split_001</b2mml:FromID>
+      <b2mml:ToID>dose_002</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0004</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=b3;gatewayGroup=AND_001</b2mml:Description>
+      <b2mml:FromID>and_split_001</b2mml:FromID>
+      <b2mml:ToID>dose_003</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0005</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=b1;gatewayGroup=AND_001</b2mml:Description>
+      <b2mml:FromID>dose_001</b2mml:FromID>
+      <b2mml:ToID>and_join_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0006</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=b2;gatewayGroup=AND_001</b2mml:Description>
+      <b2mml:FromID>dose_002</b2mml:FromID>
+      <b2mml:ToID>and_join_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0007</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=b3;gatewayGroup=AND_001</b2mml:Description>
+      <b2mml:FromID>dose_003</b2mml:FromID>
+      <b2mml:ToID>and_join_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0008</b2mml:ID>
+      <b2mml:Description>MODPLANT:gatewayGroup=AND_001</b2mml:Description>
+      <b2mml:FromID>and_join_001</b2mml:FromID>
+      <b2mml:ToID>mix_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0010</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=sample;gatewayGroup=OR_008</b2mml:Description>
+      <b2mml:FromID>or_split_001</b2mml:FromID>
+      <b2mml:ToID>usage_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0011</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=analyze;gatewayGroup=OR_008</b2mml:Description>
+      <b2mml:FromID>or_split_001</b2mml:FromID>
+      <b2mml:ToID>usage_002</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0012</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=condition;gatewayGroup=OR_008</b2mml:Description>
+      <b2mml:FromID>or_split_001</b2mml:FromID>
+      <b2mml:ToID>usage_003</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0013</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=sample;gatewayGroup=OR_008</b2mml:Description>
+      <b2mml:FromID>usage_001</b2mml:FromID>
+      <b2mml:ToID>or_join_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0014</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=analyze;gatewayGroup=OR_008</b2mml:Description>
+      <b2mml:FromID>usage_002</b2mml:FromID>
+      <b2mml:ToID>or_join_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0015</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=condition;gatewayGroup=OR_008</b2mml:Description>
+      <b2mml:FromID>usage_003</b2mml:FromID>
+      <b2mml:ToID>or_join_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0016</b2mml:ID>
+      <b2mml:Description>MODPLANT:gatewayGroup=OR_008</b2mml:Description>
+      <b2mml:FromID>or_join_001</b2mml:FromID>
+      <b2mml:ToID>xor_split_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0017</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=fast;gatewayGroup=XOR_014</b2mml:Description>
+      <b2mml:FromID>xor_split_001</b2mml:FromID>
+      <b2mml:ToID>usage_004</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0018</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=standard;gatewayGroup=XOR_014</b2mml:Description>
+      <b2mml:FromID>xor_split_001</b2mml:FromID>
+      <b2mml:ToID>usage_005</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0019</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=fast;gatewayGroup=XOR_014</b2mml:Description>
+      <b2mml:FromID>usage_004</b2mml:FromID>
+      <b2mml:ToID>xor_join_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0020</b2mml:ID>
+      <b2mml:Description>MODPLANT:branch=standard;gatewayGroup=XOR_014</b2mml:Description>
+      <b2mml:FromID>usage_005</b2mml:FromID>
+      <b2mml:ToID>xor_join_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0021</b2mml:ID>
+      <b2mml:Description>MODPLANT:gatewayGroup=XOR_014</b2mml:Description>
+      <b2mml:FromID>xor_join_001</b2mml:FromID>
+      <b2mml:ToID>settling_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0022</b2mml:ID>
+      <b2mml:FromID>settling_001</b2mml:FromID>
+      <b2mml:ToID>separation_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0023</b2mml:ID>
+      <b2mml:FromID>separation_001</b2mml:FromID>
+      <b2mml:ToID>separation_002</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0024</b2mml:ID>
+      <b2mml:FromID>separation_002</b2mml:FromID>
+      <b2mml:ToID>separation_003</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>edge_0025</b2mml:ID>
+      <b2mml:FromID>separation_003</b2mml:FromID>
+      <b2mml:ToID>__end__</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>combined_loop_in</b2mml:ID>
+      <b2mml:FromID>mix_001</b2mml:FromID>
+      <b2mml:ToID>quality_conditioning_loop</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>combined_loop_out</b2mml:ID>
+      <b2mml:FromID>quality_conditioning_loop</b2mml:FromID>
+      <b2mml:ToID>or_split_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:DirectedLink>
+      <b2mml:ID>combined_jump_skip_optional_work</b2mml:ID>
+      <b2mml:Description>MODPLANT:flow=Jump;condition=quality.skipOptionalWork</b2mml:Description>
+      <b2mml:FromID>quality_conditioning_loop</b2mml:FromID>
+      <b2mml:ToID>settling_001</b2mml:ToID>
+    </b2mml:DirectedLink>
+    <b2mml:ProcedureChartElement>
+      <b2mml:ID>__start__</b2mml:ID>
+      <b2mml:Label>Start</b2mml:Label>
+      <b2mml:Description>Start</b2mml:Description>
+      <b2mml:ProcedureChartElementType>Previous Operation Indicator</b2mml:ProcedureChartElementType>
+    </b2mml:ProcedureChartElement>
+    <b2mml:ProcedureChartElement>
+      <b2mml:ID>and_split_001</b2mml:ID>
+      <b2mml:Label>MODPLANT:AND_SPLIT;gatewayGroup=AND_001;label=AND_SPLIT;joinPolicy=wait_all</b2mml:Label>
+      <b2mml:Description>AND_SPLIT</b2mml:Description>
+      <b2mml:ProcedureChartElementType>Start Parallel Indicator</b2mml:ProcedureChartElementType>
+    </b2mml:ProcedureChartElement>
+    <b2mml:ProcedureChartElement>
+      <b2mml:ID>and_join_001</b2mml:ID>
+      <b2mml:Label>MODPLANT:AND_JOIN;gatewayGroup=AND_001;label=AND_JOIN;joinPolicy=wait_all</b2mml:Label>
+      <b2mml:Description>AND_JOIN</b2mml:Description>
+      <b2mml:ProcedureChartElementType>End Parallel Indicator</b2mml:ProcedureChartElementType>
+    </b2mml:ProcedureChartElement>
+    <b2mml:ProcedureChartElement>
+      <b2mml:ID>or_split_001</b2mml:ID>
+      <b2mml:Label>MODPLANT:OR_SPLIT;gatewayGroup=OR_008;label=OR_SPLIT;minBranches=2;maxBranches=2;joinPolicy=active_branches</b2mml:Label>
+      <b2mml:Description>OR_SPLIT</b2mml:Description>
+      <b2mml:ProcedureChartElementType>Start Optional Parallel Indicator</b2mml:ProcedureChartElementType>
+    </b2mml:ProcedureChartElement>
+    <b2mml:ProcedureChartElement>
+      <b2mml:ID>or_join_001</b2mml:ID>
+      <b2mml:Label>MODPLANT:OR_JOIN;gatewayGroup=OR_008;label=OR_JOIN;minBranches=2;maxBranches=2;joinPolicy=active_branches</b2mml:Label>
+      <b2mml:Description>OR_JOIN</b2mml:Description>
+      <b2mml:ProcedureChartElementType>End Optional Parallel Indicator</b2mml:ProcedureChartElementType>
+    </b2mml:ProcedureChartElement>
+    <b2mml:ProcedureChartElement>
+      <b2mml:ID>xor_split_001</b2mml:ID>
+      <b2mml:Label>MODPLANT:XOR_SPLIT;gatewayGroup=XOR_014;label=XOR_SPLIT;joinPolicy=exactly_one</b2mml:Label>
+      <b2mml:Description>XOR_SPLIT</b2mml:Description>
+      <b2mml:ProcedureChartElementType>Start Optional Parallel Indicator</b2mml:ProcedureChartElementType>
+    </b2mml:ProcedureChartElement>
+    <b2mml:ProcedureChartElement>
+      <b2mml:ID>xor_join_001</b2mml:ID>
+      <b2mml:Label>MODPLANT:XOR_JOIN;gatewayGroup=XOR_014;label=XOR_JOIN;joinPolicy=exactly_one</b2mml:Label>
+      <b2mml:Description>XOR_JOIN</b2mml:Description>
+      <b2mml:ProcedureChartElementType>End Optional Parallel Indicator</b2mml:ProcedureChartElementType>
+    </b2mml:ProcedureChartElement>
+    <b2mml:ProcedureChartElement>
+      <b2mml:ID>__end__</b2mml:ID>
+      <b2mml:Label>End</b2mml:Label>
+      <b2mml:Description>End</b2mml:Description>
+      <b2mml:ProcedureChartElementType>Next Operation Indicator</b2mml:ProcedureChartElementType>
+    </b2mml:ProcedureChartElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>dose_001</b2mml:ID>
+      <b2mml:Description>Dosing A</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>amount_L</b2mml:ID>
+        <b2mml:Description>amount_L</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>0.5</b2mml:ValueString>
+          <b2mml:DataType>double</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>ingredient</b2mml:ID>
+        <b2mml:Description>ingredient</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>A</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>dose</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>AND_001</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>b1</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Dosing</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>dose_002</b2mml:ID>
+      <b2mml:Description>Dosing B</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>amount_L</b2mml:ID>
+        <b2mml:Description>amount_L</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>0.5</b2mml:ValueString>
+          <b2mml:DataType>double</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>ingredient</b2mml:ID>
+        <b2mml:Description>ingredient</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>B</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>dose</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>AND_001</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>b2</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Dosing</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>dose_003</b2mml:ID>
+      <b2mml:Description>Dosing C</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>amount_L</b2mml:ID>
+        <b2mml:Description>amount_L</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>1.5</b2mml:ValueString>
+          <b2mml:DataType>double</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>ingredient</b2mml:ID>
+        <b2mml:Description>ingredient</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>C</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>dose</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>AND_001</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>b3</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Dosing</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>mix_001</b2mml:ID>
+      <b2mml:Description>Mixing_of_Liquids</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>duration_s</b2mml:ID>
+        <b2mml:Description>duration_s</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>30</b2mml:ValueString>
+          <b2mml:DataType>int</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>rpm</b2mml:ID>
+        <b2mml:Description>rpm</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>100</b2mml:ValueString>
+          <b2mml:DataType>int</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>mix</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString />
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString />
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#MixingOfLiquids</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>usage_001</b2mml:ID>
+      <b2mml:Description>Usage</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>duration_s</b2mml:ID>
+        <b2mml:Description>duration_s</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>45</b2mml:ValueString>
+          <b2mml:DataType>int</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>usage</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>OR_008</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>sample</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Usage</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>usage_002</b2mml:ID>
+      <b2mml:Description>Usage</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>duration_s</b2mml:ID>
+        <b2mml:Description>duration_s</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>75</b2mml:ValueString>
+          <b2mml:DataType>int</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>usage</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>OR_008</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>analyze</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Usage</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>usage_003</b2mml:ID>
+      <b2mml:Description>Usage</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>duration_s</b2mml:ID>
+        <b2mml:Description>duration_s</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>105</b2mml:ValueString>
+          <b2mml:DataType>int</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>usage</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>OR_008</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>condition</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Usage</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>usage_004</b2mml:ID>
+      <b2mml:Description>Usage</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>duration_s</b2mml:ID>
+        <b2mml:Description>duration_s</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>1800</b2mml:ValueString>
+          <b2mml:DataType>int</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>usage</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>XOR_014</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>fast</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Usage</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>usage_005</b2mml:ID>
+      <b2mml:Description>Usage</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>duration_s</b2mml:ID>
+        <b2mml:Description>duration_s</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>3000</b2mml:ValueString>
+          <b2mml:DataType>int</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>usage</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>XOR_014</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>standard</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Usage</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>settling_001</b2mml:ID>
+      <b2mml:Description>Settling</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>duration_s</b2mml:ID>
+        <b2mml:Description>duration_s</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>60</b2mml:ValueString>
+          <b2mml:DataType>int</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>settling</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString />
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString />
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Settling</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>separation_001</b2mml:ID>
+      <b2mml:Description>Separation of B</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>amount_L</b2mml:ID>
+        <b2mml:Description>amount_L</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>0.5</b2mml:ValueString>
+          <b2mml:DataType>double</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>ingredient</b2mml:ID>
+        <b2mml:Description>ingredient</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>B</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>separation</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString />
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString />
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Separation</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>separation_002</b2mml:ID>
+      <b2mml:Description>Separation of A</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>amount_L</b2mml:ID>
+        <b2mml:Description>amount_L</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>0.5</b2mml:ValueString>
+          <b2mml:DataType>double</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>ingredient</b2mml:ID>
+        <b2mml:Description>ingredient</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>A</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>separation</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString />
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString />
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Separation</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>separation_003</b2mml:ID>
+      <b2mml:Description>Separation of C</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>amount_L</b2mml:ID>
+        <b2mml:Description>amount_L</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>1.5</b2mml:ValueString>
+          <b2mml:DataType>double</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:ProcessElementParameter>
+        <b2mml:ID>ingredient</b2mml:ID>
+        <b2mml:Description>ingredient</b2mml:Description>
+        <b2mml:Value>
+          <b2mml:ValueString>C</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:Value>
+      </b2mml:ProcessElementParameter>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>activityType</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata activityType</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>separation</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchGroupId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchGroupId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString />
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>branchId</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata branchId</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString />
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>semanticUri</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata semanticUri</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>http://www.iat.rwth-aachen.de/capability-ontology#Separation</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:ProcessElement>
+      <b2mml:ID>quality_conditioning_loop</b2mml:ID>
+      <b2mml:Description>Condition until quality is accepted</b2mml:Description>
+      <b2mml:ProcessElementType>Process Operation</b2mml:ProcessElementType>
+      <b2mml:OtherInformation>
+        <b2mml:OtherInfoID>loop</b2mml:OtherInfoID>
+        <b2mml:Description>RecipeGraph metadata loop</b2mml:Description>
+        <b2mml:OtherValue>
+          <b2mml:ValueString>{"minIterations":1,"maxIterations":3,"planningIterations":3,"exitCondition":{"op":"ref","name":"quality.accepted"},"body":{"schemaVersion":"2.0","id":"RTN_Random_nonlinear_RuntimeLoop_42_LoopBody","recipeLevel":"General","conditionLanguage":"urn:modplant:condition:ast:v1","conformance":["Module-RoundTrip"],"nodes":[{"id":"loop_start","kind":"Start","name":"Loop start"},{"id":"conditioning_mix","kind":"Activity","name":"Quality conditioning mix","activityType":"mix","parameters":{"rpm":100,"duration_s":20},"metadata":{"processElementType":"Process Operation"}},{"id":"loop_end","kind":"End","name":"Loop end"}],"edges":[{"id":"loop_e1","source":"loop_start","target":"conditioning_mix","flowType":"Control"},{"id":"loop_e2","source":"conditioning_mix","target":"loop_end","flowType":"Control"}]}}</b2mml:ValueString>
+          <b2mml:DataType>string</b2mml:DataType>
+        </b2mml:OtherValue>
+      </b2mml:OtherInformation>
+    </b2mml:ProcessElement>
+    <b2mml:OtherInformation>
+      <b2mml:OtherInfoID>ModuleCapabilityWarning1</b2mml:OtherInfoID>
+      <b2mml:Description>General Recipe optional parallel indicators cannot distinguish XOR from OR: xor_split_001, xor_join_001</b2mml:Description>
+      <b2mml:OtherValue>
+        <b2mml:ValueString>General Recipe optional parallel indicators cannot distinguish XOR from OR: xor_split_001, xor_join_001</b2mml:ValueString>
+        <b2mml:DataType>string</b2mml:DataType>
+      </b2mml:OtherValue>
+    </b2mml:OtherInformation>
+    <b2mml:OtherInformation>
+      <b2mml:OtherInfoID>ModuleCapabilityWarning2</b2mml:OtherInfoID>
+      <b2mml:Description>General Recipe core has no structured LoopRegion: quality_conditioning_loop</b2mml:Description>
+      <b2mml:OtherValue>
+        <b2mml:ValueString>General Recipe core has no structured LoopRegion: quality_conditioning_loop</b2mml:ValueString>
+        <b2mml:DataType>string</b2mml:DataType>
+      </b2mml:OtherValue>
+    </b2mml:OtherInformation>
+    <b2mml:OtherInformation>
+      <b2mml:OtherInfoID>ModuleGraph.ingredient_count</b2mml:OtherInfoID>
+      <b2mml:Description>Canonical RecipeGraph metadata ingredient_count</b2mml:Description>
+      <b2mml:OtherValue>
+        <b2mml:ValueString>3</b2mml:ValueString>
+        <b2mml:DataType>string</b2mml:DataType>
+      </b2mml:OtherValue>
+    </b2mml:OtherInformation>
+    <b2mml:OtherInformation>
+      <b2mml:OtherInfoID>ModuleGraph.inputs</b2mml:OtherInfoID>
+      <b2mml:Description>Canonical RecipeGraph metadata inputs</b2mml:Description>
+      <b2mml:OtherValue>
+        <b2mml:ValueString>{"A":0.5,"B":0.5,"C":1.5}</b2mml:ValueString>
+        <b2mml:DataType>string</b2mml:DataType>
+      </b2mml:OtherValue>
+    </b2mml:OtherInformation>
+    <b2mml:OtherInformation>
+      <b2mml:OtherInfoID>ModuleGraph.outputs</b2mml:OtherInfoID>
+      <b2mml:Description>Canonical RecipeGraph metadata outputs</b2mml:Description>
+      <b2mml:OtherValue>
+        <b2mml:ValueString>{"Product":2.5}</b2mml:ValueString>
+        <b2mml:DataType>string</b2mml:DataType>
+      </b2mml:OtherValue>
+    </b2mml:OtherInformation>
+    <b2mml:OtherInformation>
+      <b2mml:OtherInfoID>ModuleGraph.random_seed</b2mml:OtherInfoID>
+      <b2mml:Description>Canonical RecipeGraph metadata random_seed</b2mml:Description>
+      <b2mml:OtherValue>
+        <b2mml:ValueString>42</b2mml:ValueString>
+        <b2mml:DataType>string</b2mml:DataType>
+      </b2mml:OtherValue>
+    </b2mml:OtherInformation>
+    <b2mml:OtherInformation>
+      <b2mml:OtherInfoID>ModuleGraph.runtimeVariant</b2mml:OtherInfoID>
+      <b2mml:Description>Canonical RecipeGraph metadata runtimeVariant</b2mml:Description>
+      <b2mml:OtherValue>
+        <b2mml:ValueString>or-loop-jump</b2mml:ValueString>
+        <b2mml:DataType>string</b2mml:DataType>
+      </b2mml:OtherValue>
+    </b2mml:OtherInformation>
+    <b2mml:OtherInformation>
+      <b2mml:OtherInfoID>ModuleGraph.source</b2mml:OtherInfoID>
+      <b2mml:Description>Canonical RecipeGraph metadata source</b2mml:Description>
+      <b2mml:OtherValue>
+        <b2mml:ValueString>seeded_random_recipe</b2mml:ValueString>
+        <b2mml:DataType>string</b2mml:DataType>
+      </b2mml:OtherValue>
+    </b2mml:OtherInformation>
+    <b2mml:OtherInformation>
+      <b2mml:OtherInfoID>ModuleGraph.topology</b2mml:OtherInfoID>
+      <b2mml:Description>Canonical RecipeGraph metadata topology</b2mml:Description>
+      <b2mml:OtherValue>
+        <b2mml:ValueString>nonlinear</b2mml:ValueString>
+        <b2mml:DataType>string</b2mml:DataType>
+      </b2mml:OtherValue>
+    </b2mml:OtherInformation>
+    <b2mml:OtherInformation>
+      <b2mml:OtherInfoID>ModuleGraph.volume</b2mml:OtherInfoID>
+      <b2mml:Description>Canonical RecipeGraph metadata volume</b2mml:Description>
+      <b2mml:OtherValue>
+        <b2mml:ValueString>2.5</b2mml:ValueString>
+        <b2mml:DataType>string</b2mml:DataType>
+      </b2mml:OtherValue>
+    </b2mml:OtherInformation>
+  </b2mml:ProcessProcedure>
+</b2mml:GRecipe>

@@ -1,0 +1,32 @@
+{
+ "config_kwargs": {
+  "base_profit": 1800.0,
+  "lambda_per_second": -0.5,
+  "usage_cost_weight": 1.0,
+  "energy_cost_weight": 1.0,
+  "co2_penalty": 1.0,
+  "electricity_price_eur_per_kwh": 0.3,
+  "connect_duration_s": 3.0,
+  "disconnect_duration_s": 2.0,
+  "require_final_disconnect": false,
+  "enable_auxiliary_transfers": true,
+  "allow_process_transfers": true,
+  "auxiliary_transfer_mode": "lazy",
+  "lazy_auxiliary_eager_audit": false,
+  "relative_gap_limit": 0.001,
+  "solver_time_limit_s": 180,
+  "num_workers": 8,
+  "time_scale": 1,
+  "cost_scale": 100000
+ },
+ "solve_time_s": 2.34,
+ "makespan_s": 2283.0,
+ "status": "OPTIMAL",
+ "branches": {
+  "XOR_008": "fast"
+ },
+ "total_cost": 58.062083333333334,
+ "profit": 600.4379166666666,
+ "energy_kwh": 22.945833333333333,
+ "co2_kg": 9.178333333333335
+}

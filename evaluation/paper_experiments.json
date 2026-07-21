@@ -1,0 +1,1021 @@
+{
+ "meta": {
+  "machine": "Apple M1 Max, 10 cores, 64 GB RAM",
+  "platform": "macOS-15.7.7-arm64-arm-64bit-Mach-O",
+  "python": "3.13.9",
+  "planner": {
+   "gap": 0.001,
+   "time_limit_s": 120,
+   "workers": 8,
+   "lambda_per_second": -0.5,
+   "aux_mode": "lazy"
+  },
+  "ortools": "9.15.6755",
+  "benchmark_wall_time_s": 28.9
+ },
+ "benchmark": [
+  {
+   "config": "A4",
+   "recipe": "R1_3par",
+   "n_modules": 4,
+   "ir_nodes": 14,
+   "rtn_tasks": 10,
+   "status": "OPTIMAL",
+   "branches": {
+    "XOR_008": "fast"
+   },
+   "makespan_s": 2293.0,
+   "total_cost": 36.0,
+   "objective_profit": -882.5,
+   "solve_time_s": 2.38,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 16
+  },
+  {
+   "config": "A4",
+   "recipe": "R2_2mix",
+   "n_modules": 4,
+   "ir_nodes": 17,
+   "rtn_tasks": 11,
+   "status": "OPTIMAL",
+   "branches": {
+    "XOR_012": "fast"
+   },
+   "makespan_s": 2383.0,
+   "total_cost": 44.0,
+   "objective_profit": -935.5,
+   "solve_time_s": 1.99,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 19
+  },
+  {
+   "config": "A4",
+   "recipe": "R3_simple",
+   "n_modules": 4,
+   "ir_nodes": 8,
+   "rtn_tasks": 6,
+   "status": "OPTIMAL",
+   "branches": {},
+   "makespan_s": 313.0,
+   "total_cost": 22.0,
+   "objective_profit": -28.5,
+   "solve_time_s": 1.0,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 9
+  },
+  {
+   "config": "A4",
+   "recipe": "R4_mini",
+   "n_modules": 4,
+   "ir_nodes": 9,
+   "rtn_tasks": 5,
+   "status": "OPTIMAL",
+   "branches": {
+    "XOR_006": "standard"
+   },
+   "makespan_s": 753.0,
+   "total_cost": 9.0,
+   "objective_profit": -285.5,
+   "solve_time_s": 0.46,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 5
+  },
+  {
+   "config": "A4",
+   "recipe": "R5_seq",
+   "n_modules": 4,
+   "ir_nodes": 20,
+   "rtn_tasks": 12,
+   "status": "OPTIMAL",
+   "branches": {
+    "XOR_016": "standard"
+   },
+   "makespan_s": 1503.0,
+   "total_cost": 47.0,
+   "objective_profit": -698.5,
+   "solve_time_s": 3.05,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 20
+  },
+  {
+   "config": "A4",
+   "recipe": "R7_nous",
+   "n_modules": 4,
+   "ir_nodes": 6,
+   "rtn_tasks": 4,
+   "status": "OPTIMAL",
+   "branches": {},
+   "makespan_s": 203.0,
+   "total_cost": 19.0,
+   "objective_profit": -20.5,
+   "solve_time_s": 0.63,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 8
+  },
+  {
+   "config": "B3",
+   "recipe": "R3_simple",
+   "n_modules": 3,
+   "ir_nodes": 8,
+   "rtn_tasks": 6,
+   "status": "OPTIMAL",
+   "branches": {},
+   "makespan_s": 298.0,
+   "total_cost": 23.0,
+   "objective_profit": -22.0,
+   "solve_time_s": 0.11,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 10
+  },
+  {
+   "config": "B3",
+   "recipe": "R4_mini",
+   "n_modules": 3,
+   "ir_nodes": 9,
+   "rtn_tasks": 5,
+   "status": "OPTIMAL",
+   "branches": {
+    "XOR_006": "standard"
+   },
+   "makespan_s": 693.0,
+   "total_cost": 8.0,
+   "objective_profit": -254.5,
+   "solve_time_s": 0.07,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 5
+  },
+  {
+   "config": "B3",
+   "recipe": "R7_nous",
+   "n_modules": 3,
+   "ir_nodes": 6,
+   "rtn_tasks": 4,
+   "status": "INFEASIBLE",
+   "branches": {},
+   "makespan_s": 0.0,
+   "total_cost": 0.0,
+   "objective_profit": -Infinity,
+   "solve_time_s": 0.17
+  },
+  {
+   "config": "B3",
+   "recipe": "R8_solo",
+   "n_modules": 3,
+   "ir_nodes": 5,
+   "rtn_tasks": 3,
+   "status": "OPTIMAL",
+   "branches": {},
+   "makespan_s": 23.0,
+   "total_cost": 14.0,
+   "objective_profit": 24.5,
+   "solve_time_s": 0.05,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 6
+  },
+  {
+   "config": "C5",
+   "recipe": "R3_simple",
+   "n_modules": 5,
+   "ir_nodes": 8,
+   "rtn_tasks": 6,
+   "status": "OPTIMAL",
+   "branches": {},
+   "makespan_s": 348.0,
+   "total_cost": 36.0,
+   "objective_profit": -60.0,
+   "solve_time_s": 18.27,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 17
+  },
+  {
+   "config": "C5",
+   "recipe": "R4_mini",
+   "n_modules": 5,
+   "ir_nodes": 9,
+   "rtn_tasks": 5,
+   "status": "OPTIMAL",
+   "branches": {
+    "XOR_006": "standard"
+   },
+   "makespan_s": 733.0,
+   "total_cost": 7.0,
+   "objective_profit": -273.5,
+   "solve_time_s": 0.23,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 5
+  },
+  {
+   "config": "C5",
+   "recipe": "R7_nous",
+   "n_modules": 5,
+   "ir_nodes": 6,
+   "rtn_tasks": 4,
+   "status": "OPTIMAL",
+   "branches": {},
+   "makespan_s": 193.0,
+   "total_cost": 13.0,
+   "objective_profit": -9.5,
+   "solve_time_s": 0.47,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 6
+  },
+  {
+   "config": "E3",
+   "recipe": "R4_mini",
+   "n_modules": 3,
+   "ir_nodes": 9,
+   "rtn_tasks": 5,
+   "status": "OPTIMAL",
+   "branches": {
+    "XOR_006": "standard"
+   },
+   "makespan_s": 793.0,
+   "total_cost": 13.0,
+   "objective_profit": -309.5,
+   "solve_time_s": 0.06,
+   "valid": true,
+   "validation_errors": 0,
+   "n_operations": 7
+  }
+ ],
+ "infeasible_case": {
+  "config": "A4cap",
+  "recipe": "R1_3par",
+  "capacities_L": {
+   "HC10": 3,
+   "HC20": 5,
+   "HC30": 4,
+   "HC40": 4
+  },
+  "status": "INFEASIBLE",
+  "solve_time_s": 0.01,
+  "diagnostics": {
+   "infeasible_reason": "No feasible Module found for node mix_001 (mix)",
+   "node_id": "mix_001",
+   "node_type": "mix",
+   "auxiliary_transfer_mode": "lazy",
+   "lazy_fallback_used": true,
+   "lazy_iterations": 1,
+   "lazy_fallback_reason": "relaxed solve returned INFEASIBLE",
+   "lazy_candidate_count": 0
+  }
+ },
+ "lazy_transfer_statistics": {
+  "description": "How often the lazy auxiliary-transfer loop certifies a schedule on its own and how often it falls back to complete enumeration. Regenerate with `python scripts/lazy_statistics.py stats --repeats 5`.",
+  "repeats_per_instance": 5,
+  "feasible_instances": 13,
+  "instances_falling_back_to_complete_enumeration": [
+   "C5 x R3_simple"
+  ],
+  "per_case": {
+   "A4 x R1_3par": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 3,
+     "max": 5
+    },
+    "lazy_candidate_count": {
+     "min": 78,
+     "max": 117,
+     "median": 78
+    },
+    "solve_time_s": {
+     "min": 2.14,
+     "max": 3.38
+    }
+   },
+   "A4 x R2_2mix": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 6,
+     "max": 8
+    },
+    "lazy_candidate_count": {
+     "min": 126,
+     "max": 147,
+     "median": 143
+    },
+    "solve_time_s": {
+     "min": 3.6,
+     "max": 4.44
+    }
+   },
+   "A4 x R3_simple": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 5,
+     "max": 6
+    },
+    "lazy_candidate_count": {
+     "min": 48,
+     "max": 55,
+     "median": 48
+    },
+    "solve_time_s": {
+     "min": 0.93,
+     "max": 1.07
+    }
+   },
+   "A4 x R4_mini": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 2,
+     "max": 5
+    },
+    "lazy_candidate_count": {
+     "min": 22,
+     "max": 46,
+     "median": 46
+    },
+    "solve_time_s": {
+     "min": 0.2,
+     "max": 0.54
+    }
+   },
+   "A4 x R5_seq": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 5,
+     "max": 8
+    },
+    "lazy_candidate_count": {
+     "min": 106,
+     "max": 159,
+     "median": 159
+    },
+    "solve_time_s": {
+     "min": 2.99,
+     "max": 4.34
+    }
+   },
+   "A4 x R7_nous": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 4,
+     "max": 6
+    },
+    "lazy_candidate_count": {
+     "min": 35,
+     "max": 47,
+     "median": 39
+    },
+    "solve_time_s": {
+     "min": 0.56,
+     "max": 0.77
+    }
+   },
+   "B3 x R3_simple": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 2,
+     "max": 2
+    },
+    "lazy_candidate_count": {
+     "min": 3,
+     "max": 3,
+     "median": 3
+    },
+    "solve_time_s": {
+     "min": 0.1,
+     "max": 0.11
+    }
+   },
+   "B3 x R4_mini": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 1,
+     "max": 3
+    },
+    "lazy_candidate_count": {
+     "min": 0,
+     "max": 8,
+     "median": 0
+    },
+    "solve_time_s": {
+     "min": 0.03,
+     "max": 0.06
+    }
+   },
+   "B3 x R7_nous": {
+    "status": [
+     "INFEASIBLE"
+    ],
+    "fallback_used": [
+     true
+    ],
+    "fallback_reason": [
+     "hard inventory solve returned INFEASIBLE"
+    ],
+    "lazy_iterations": {
+     "min": 2,
+     "max": 3
+    },
+    "lazy_candidate_count": {
+     "min": 7,
+     "max": 11,
+     "median": 7
+    },
+    "solve_time_s": {
+     "min": 0.15,
+     "max": 0.19
+    }
+   },
+   "B3 x R8_solo": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 2,
+     "max": 2
+    },
+    "lazy_candidate_count": {
+     "min": 1,
+     "max": 1,
+     "median": 1
+    },
+    "solve_time_s": {
+     "min": 0.05,
+     "max": 0.05
+    }
+   },
+   "C5 x R3_simple": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     true
+    ],
+    "fallback_reason": [
+     "hard inventory solve returned INFEASIBLE"
+    ],
+    "lazy_iterations": {
+     "min": 2,
+     "max": 2
+    },
+    "lazy_candidate_count": {
+     "min": 13,
+     "max": 13,
+     "median": 13
+    },
+    "solve_time_s": {
+     "min": 17.47,
+     "max": 18.8
+    }
+   },
+   "C5 x R4_mini": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 3,
+     "max": 8
+    },
+    "lazy_candidate_count": {
+     "min": 20,
+     "max": 66,
+     "median": 30
+    },
+    "solve_time_s": {
+     "min": 0.19,
+     "max": 0.74
+    }
+   },
+   "C5 x R7_nous": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 4,
+     "max": 4
+    },
+    "lazy_candidate_count": {
+     "min": 31,
+     "max": 34,
+     "median": 34
+    },
+    "solve_time_s": {
+     "min": 0.42,
+     "max": 0.45
+    }
+   },
+   "E3 x R4_mini": {
+    "status": [
+     "OPTIMAL"
+    ],
+    "fallback_used": [
+     false
+    ],
+    "fallback_reason": [],
+    "lazy_iterations": {
+     "min": 2,
+     "max": 3
+    },
+    "lazy_candidate_count": {
+     "min": 9,
+     "max": 11,
+     "median": 11
+    },
+    "solve_time_s": {
+     "min": 0.07,
+     "max": 0.14
+    }
+   }
+  },
+  "lazy_vs_complete_enumeration": {
+   "A4 x R1_3par": {
+    "eager_candidate_count": [
+     690
+    ],
+    "eager_solve_time_s": {
+     "min": 26.28,
+     "max": 27.79
+    },
+    "lazy_candidate_count": {
+     "min": 78,
+     "max": 117,
+     "median": 78
+    },
+    "lazy_solve_time_s": {
+     "min": 2.14,
+     "max": 3.38
+    }
+   },
+   "C5 x R3_simple": {
+    "eager_candidate_count": [
+     589
+    ],
+    "eager_solve_time_s": {
+     "min": 17.32,
+     "max": 19.07
+    },
+    "lazy_candidate_count": {
+     "min": 13,
+     "max": 13,
+     "median": 13
+    },
+    "lazy_solve_time_s": {
+     "min": 17.47,
+     "max": 18.8
+    }
+   }
+  }
+ },
+ "reproducibility": {
+  "description": "Whether identical inputs reproduce identical results, compared at three levels. Regenerate with `python scripts/lazy_statistics.py repro --repeats 5`.",
+  "repeats_per_instance": 5,
+  "instances": 8,
+  "identical_outcome": 7,
+  "identical_full_schedule": 2,
+  "identical_ignoring_generated_ids": 2,
+  "identical_ignoring_ports": 5,
+  "per_case": {
+   "A4 x R1_3par": {
+    "identical": {
+     "full": false,
+     "physical": false,
+     "routing": false
+    },
+    "identical_outcome": true,
+    "outcome_variants": [
+     {
+      "status": "OPTIMAL",
+      "objective_profit": -882.5,
+      "makespan_s": 2293.0,
+      "total_cost": 36.0,
+      "branches": "{\"XOR_008\": \"fast\"}",
+      "n_operations": 16
+     }
+    ]
+   },
+   "A4 x R2_2mix": {
+    "identical": {
+     "full": false,
+     "physical": false,
+     "routing": false
+    },
+    "identical_outcome": false,
+    "outcome_variants": [
+     {
+      "status": "OPTIMAL",
+      "objective_profit": -935.5,
+      "makespan_s": 2383.0,
+      "total_cost": 44.0,
+      "branches": "{\"XOR_012\": \"fast\"}",
+      "n_operations": 19
+     },
+     {
+      "status": "OPTIMAL",
+      "objective_profit": -906.5,
+      "makespan_s": 2343.0,
+      "total_cost": 35.0,
+      "branches": "{\"XOR_012\": \"fast\"}",
+      "n_operations": 15
+     }
+    ]
+   },
+   "A4 x R3_simple": {
+    "identical": {
+     "full": false,
+     "physical": false,
+     "routing": true
+    },
+    "identical_outcome": true,
+    "outcome_variants": [
+     {
+      "status": "OPTIMAL",
+      "objective_profit": -28.5,
+      "makespan_s": 313.0,
+      "total_cost": 22.0,
+      "branches": "{}",
+      "n_operations": 9
+     }
+    ]
+   },
+   "A4 x R5_seq": {
+    "identical": {
+     "full": false,
+     "physical": false,
+     "routing": true
+    },
+    "identical_outcome": true,
+    "outcome_variants": [
+     {
+      "status": "OPTIMAL",
+      "objective_profit": -698.5,
+      "makespan_s": 1503.0,
+      "total_cost": 47.0,
+      "branches": "{\"XOR_016\": \"standard\"}",
+      "n_operations": 20
+     }
+    ]
+   },
+   "B3 x R3_simple": {
+    "identical": {
+     "full": true,
+     "physical": true,
+     "routing": true
+    },
+    "identical_outcome": true,
+    "outcome_variants": [
+     {
+      "status": "OPTIMAL",
+      "objective_profit": -22.0,
+      "makespan_s": 298.0,
+      "total_cost": 23.0,
+      "branches": "{}",
+      "n_operations": 10
+     }
+    ]
+   },
+   "C5 x R3_simple": {
+    "identical": {
+     "full": true,
+     "physical": true,
+     "routing": true
+    },
+    "identical_outcome": true,
+    "outcome_variants": [
+     {
+      "status": "OPTIMAL",
+      "objective_profit": -60.0,
+      "makespan_s": 348.0,
+      "total_cost": 36.0,
+      "branches": "{}",
+      "n_operations": 17
+     }
+    ]
+   },
+   "C5 x R7_nous": {
+    "identical": {
+     "full": false,
+     "physical": false,
+     "routing": false
+    },
+    "identical_outcome": true,
+    "outcome_variants": [
+     {
+      "status": "OPTIMAL",
+      "objective_profit": -9.5,
+      "makespan_s": 193.0,
+      "total_cost": 13.0,
+      "branches": "{}",
+      "n_operations": 6
+     }
+    ]
+   },
+   "E3 x R4_mini": {
+    "identical": {
+     "full": false,
+     "physical": false,
+     "routing": true
+    },
+    "identical_outcome": true,
+    "outcome_variants": [
+     {
+      "status": "OPTIMAL",
+      "objective_profit": -309.5,
+      "makespan_s": 793.0,
+      "total_cost": 13.0,
+      "branches": "{\"XOR_006\": \"standard\"}",
+      "n_operations": 7
+     }
+    ]
+   }
+  }
+ },
+ "optimality_audit": {
+  "description": "Objective value of the lazy loop compared with complete enumeration on the same instance. The lazy loop proves optimality with respect to the candidates it generated, so a lazy result can be below the optimum of the fully enumerated model while still being reported as OPTIMAL. Regenerate with `python scripts/lazy_statistics.py audit --repeats 3`.",
+  "repeats_per_instance": 3,
+  "instances_where_enumeration_beats_lazy": [
+   "A4 x R4_mini"
+  ],
+  "per_case": {
+   "A4 x R1_3par": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -882.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -882.5,
+    "eager_solve_time_s": 25.94,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "A4 x R2_2mix": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -935.5,
+     -906.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -906.5,
+    "eager_solve_time_s": 33.36,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "A4 x R3_simple": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -28.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -28.5,
+    "eager_solve_time_s": 8.84,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "A4 x R4_mini": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -310.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -285.5,
+    "eager_solve_time_s": 9.35,
+    "best_lazy_below_enumeration_percent": 8.757
+   },
+   "A4 x R5_seq": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -698.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -698.5,
+    "eager_solve_time_s": 32.75,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "A4 x R7_nous": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -20.5,
+     -10.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -10.5,
+    "eager_solve_time_s": 6.28,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "B3 x R3_simple": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -22.0
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -22.0,
+    "eager_solve_time_s": 0.8,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "B3 x R4_mini": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -254.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -254.5,
+    "eager_solve_time_s": 0.46,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "B3 x R7_nous": {
+    "lazy_status": [
+     "INFEASIBLE"
+    ],
+    "lazy_objective_profit": [
+     -Infinity
+    ],
+    "eager_status": "INFEASIBLE",
+    "eager_objective_profit": -Infinity,
+    "eager_solve_time_s": 0.12,
+    "best_lazy_below_enumeration_percent": null
+   },
+   "B3 x R8_solo": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     24.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": 24.5,
+    "eager_solve_time_s": 0.21,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "C5 x R3_simple": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -60.0
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -60.0,
+    "eager_solve_time_s": 18.19,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "C5 x R4_mini": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -273.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -273.5,
+    "eager_solve_time_s": 28.91,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "C5 x R7_nous": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -9.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -9.5,
+    "eager_solve_time_s": 11.77,
+    "best_lazy_below_enumeration_percent": 0.0
+   },
+   "E3 x R4_mini": {
+    "lazy_status": [
+     "OPTIMAL"
+    ],
+    "lazy_objective_profit": [
+     -309.5
+    ],
+    "eager_status": "OPTIMAL",
+    "eager_objective_profit": -309.5,
+    "eager_solve_time_s": 0.45,
+    "best_lazy_below_enumeration_percent": 0.0
+   }
+  },
+  "note": "The per-case numbers below come from one pass in which each instance was solved three times directly after other solves in the same process. Whether a lazy run stays below the enumerated optimum depends on machine load, because the candidate set follows from the first solution of the relaxed solve. On an otherwise idle machine and over twelve repetitions, A4 x R2_2mix stayed below the optimum three times, A4 x R4_mini once, and every other instance never; running A4 x R4_mini directly after another solve raised it to six out of twelve.",
+  "reference_case": {
+   "source": "sample_data.sample_recipe_spec() on the demo plant, as in ModPlant-RTN.ipynb",
+   "gap_0.001_lazy": {
+    "runs": 5,
+    "objective_profit": 600.4,
+    "makespan_s": 2283.0,
+    "total_cost": 58.1
+   },
+   "gap_0.001_complete_enumeration": {
+    "runs": 2,
+    "objective_profit": 600.4,
+    "makespan_s": 2283.0,
+    "total_cost": 58.1
+   },
+   "gap_0.02_lazy": {
+    "runs": 5,
+    "objective_profit": [
+     600.4,
+     588.9
+    ],
+    "comment": "the 2 % App default occasionally stops above the gap-0.1 % optimum; app_demo_meta.json stored such a run and has been regenerated at the 0.1 % gap tolerance"
+   },
+   "solve_time_s_at_gap_0.001": {
+    "runs": 8,
+    "min": 2.18,
+    "median": 2.28,
+    "max": 2.45
+   }
+  },
+  "benchmark_rows_matching_enumeration": {
+   "matching": 11,
+   "feasible_rows": 13,
+   "below_enumeration": {
+    "A4 x R2_2mix": {
+     "row": -935.5,
+     "enumerated": -906.5
+    },
+    "A4 x R7_nous": {
+     "row": -20.5,
+     "enumerated": -10.5
+    }
+   }
+  }
+ }
+}

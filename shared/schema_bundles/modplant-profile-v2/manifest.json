@@ -1,0 +1,9 @@
+{
+  "id": "modplant-profile-v2",
+  "batchmlVersion": "7.01",
+  "extensionNamespace": "http://www.mesa.org/xml/B2MML-AllExtensions",
+  "mode": "complete-extension-package-replacement",
+  "profileNamespace": "urn:modplant:recipe-profile:v2",
+  "mutuallyExclusiveWith": ["mesa-v7.01"]
+}
+

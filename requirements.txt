@@ -1,0 +1,11 @@
+# Core solver and data handling
+ortools>=9.15
+pandas>=2.0
+jsonschema>=4.20
+
+# Notebook interface
+notebook>=7.0
+ipywidgets>=8.0
+
+# Testing
+pytest>=8.0

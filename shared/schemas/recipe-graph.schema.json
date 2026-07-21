@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:modplant:schema:recipe-graph:v2",
+  "title": "Module RecipeGraph",
+  "type": "object",
+  "required": ["schemaVersion", "id", "recipeLevel", "nodes", "edges"],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": { "const": "2.0" },
+    "id": { "$ref": "#/$defs/id" },
+    "name": { "type": "string" },
+    "recipeLevel": { "enum": ["General", "Master", "Control"] },
+    "conditionLanguage": { "const": "urn:modplant:condition:ast:v1" },
+    "conformance": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": ["BatchML-Core", "Module-RoundTrip", "Module-Planning", "Module-Execution"]
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/node" }
+    },
+    "edges": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/edge" }
+    },
+    "metadata": { "type": "object" }
+  },
+  "$defs": {
+    "id": { "type": "string", "minLength": 1, "pattern": "^[^\\s]+$" },
+    "condition": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["op", "value"],
+          "additionalProperties": false,
+          "properties": {
+            "op": { "const": "literal" },
+            "value": { "type": ["boolean", "number", "string", "null"] }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["op", "name"],
+          "additionalProperties": false,
+          "properties": {
+            "op": { "const": "ref" },
+            "name": { "$ref": "#/$defs/id" }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["op", "arg"],
+          "additionalProperties": false,
+          "properties": {
+            "op": { "const": "not" },
+            "arg": { "$ref": "#/$defs/condition" }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["op", "args"],
+          "additionalProperties": false,
+          "properties": {
+            "op": { "enum": ["and", "or"] },
+            "args": {
+              "type": "array",
+              "minItems": 2,
+              "items": { "$ref": "#/$defs/condition" }
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["op", "left", "right"],
+          "additionalProperties": false,
+          "properties": {
+            "op": { "enum": ["eq", "ne", "lt", "le", "gt", "ge"] },
+            "left": { "$ref": "#/$defs/condition" },
+            "right": { "$ref": "#/$defs/condition" }
+          }
+        }
+      ]
+    },
+    "node": {
+      "type": "object",
+      "required": ["id", "kind"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "kind": { "enum": ["Start", "End", "Activity", "Gateway", "Transition", "LoopRegion"] },
+        "name": { "type": "string" },
+        "activityType": { "type": "string" },
+        "gatewayType": {
+          "enum": ["AND_SPLIT", "AND_JOIN", "XOR_SPLIT", "XOR_JOIN", "OR_SPLIT", "OR_JOIN"]
+        },
+        "procedureChartElementType": { "type": "string" },
+        "parameters": { "type": "object" },
+        "loop": {
+          "type": "object",
+          "required": ["body", "exitCondition"],
+          "additionalProperties": false,
+          "properties": {
+            "body": { "$ref": "#" },
+            "exitCondition": { "$ref": "#/$defs/condition" },
+            "minIterations": { "type": "integer", "minimum": 0 },
+            "maxIterations": { "type": "integer", "minimum": 1 },
+            "planningIterations": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "metadata": { "type": "object" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "Gateway" } }, "required": ["kind"] },
+          "then": { "required": ["gatewayType"] }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "LoopRegion" } }, "required": ["kind"] },
+          "then": { "required": ["loop"] }
+        }
+      ]
+    },
+    "edge": {
+      "type": "object",
+      "required": ["id", "source", "target"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "source": { "$ref": "#/$defs/id" },
+        "target": { "$ref": "#/$defs/id" },
+        "flowType": { "enum": ["Control", "Material", "Transfer", "Synchronization", "Jump"] },
+        "branchId": { "$ref": "#/$defs/id" },
+        "condition": { "$ref": "#/$defs/condition" },
+        "priority": { "type": "integer", "minimum": 0 },
+        "isDefault": { "type": "boolean" },
+        "gatewayGroupId": { "$ref": "#/$defs/id" },
+        "metadata": { "type": "object" }
+      }
+    }
+  }
+}

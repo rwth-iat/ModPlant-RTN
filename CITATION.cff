@@ -1,0 +1,69 @@
+cff-version: 1.2.0
+title: >-
+  ModPlant-RTN: A Resource-Task Network Framework for Modeling
+  and Scheduling Complex Recipes in Modular Plants
+message: >-
+  If you use this software, please cite both the software and
+  the accompanying conference paper.
+type: software
+authors:
+  - given-names: Bowen
+    family-names: Chen
+    email: b.chen@iat.rwth-aachen.de
+    affiliation: >-
+      Chair of Information and Automation Systems,
+      RWTH Aachen University
+  - given-names: Torben
+    family-names: Miny
+    email: t.miny@iat.rwth-aachen.de
+    affiliation: >-
+      Chair of Information and Automation Systems,
+      RWTH Aachen University
+  - given-names: Tobias
+    family-names: Kleinert
+    email: kleinert@iat.rwth-aachen.de
+    affiliation: >-
+      Chair of Information and Automation Systems,
+      RWTH Aachen University
+repository-code: 'https://github.com/rwth-iat/ModPlant-RTN'
+abstract: >-
+  Reference implementation of a resource-task network framework
+  that maps branched ISA-88 batch recipes and machine-readable
+  modular plant descriptions onto a single constraint-programming
+  model. One solve decides branch selection, unit assignment,
+  material routing, and timing under a profit objective covering
+  makespan, operation cost, energy, and emissions. An independent
+  validator re-checks every schedule, which is exported as an
+  equipment-assigned BatchML master recipe.
+keywords:
+  - resource-task network
+  - constraint programming
+  - batch process scheduling
+  - modular production plants
+  - ISA-88
+  - asset administration shell
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: >-
+    A Resource-Task Network Framework for Modeling and Scheduling
+    Complex Recipes in Modular Plants
+  authors:
+    - given-names: Bowen
+      family-names: Chen
+    - given-names: Torben
+      family-names: Miny
+    - given-names: Tobias
+      family-names: Kleinert
+  collection-title: >-
+    Proceedings of IECON 2026 - 52nd Annual Conference of the
+    IEEE Industrial Electronics Society
+  conference:
+    name: >-
+      IECON 2026 - 52nd Annual Conference of the IEEE Industrial
+      Electronics Society
+    city: Doha
+    country: QA
+  publisher:
+    name: IEEE
+  year: 2026

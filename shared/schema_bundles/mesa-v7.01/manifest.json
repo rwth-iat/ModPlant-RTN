@@ -1,0 +1,8 @@
+{
+  "id": "mesa-v7.01",
+  "batchmlVersion": "7.01",
+  "extensionNamespace": "http://www.mesa.org/xml/B2MML-AllExtensions",
+  "mode": "unmodified",
+  "mutuallyExclusiveWith": ["modplant-profile-v2"]
+}
+
